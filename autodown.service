@@ -1,0 +1,9 @@
+[Unit]
+Description=Autodown Service
+After=network.target
+
+[Service]
+ExecStart=/bin/bash /opt/autodown/autodown.sh
+
+[Install]
+WantedBy=multi-user.target
