@@ -39,10 +39,10 @@ check_updates() {
 
 
     #if [[ "$local_file" == "$remote_file" ]]; then
-    if [[ "$local_file" == "$remote_file" ]]; then
+    if [[ "$local_file" == "$remote_file" && -n "$remote_file" ]]; then
         echo "No se requiere descargar el archivo. El archivo remoto no se ha actualizado."
     #elif [[ "$local_file" != "$remote_file" && -n "$remote_file" ]]; then
-    elif [[ "$local_file" != "$remote_file" && -n "$remote_file" ]] || [[ -z "$local_file" ]]; then
+    else
         # Eliminar la actualización vieja local
         rm -rf $tmp_dir/$filename
         #rm -rf $target_dir/$target_subdir/*
