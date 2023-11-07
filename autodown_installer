@@ -1,0 +1,17 @@
+#!/bin/bash
+
+cd /opt
+git clone https://github.com/AnonymousWebHacker/autodown.git
+cd /opt/autodown/
+cp autodown.service /etc/systemd/system/autodown.service
+systemctl enable autodown
+rm -r autodown_installer
+echo "=============================================================="
+echo "                       AUTODOWN                               "
+echo "                   AnonymousWebHacker                         "
+echo "=============================================================="
+echo "Autodown Instalado correctamente"
+echo "Modifique el archivo de configuracion ---> /opt/autodown.conf"
+echo "Correr el servicio ---> systemctl start autodown"
+echo "Parar el servicio ---> systemctl stop autodown"
+echo "=============================================================="

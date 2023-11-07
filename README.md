@@ -1,6 +1,10 @@
 # autodown
 Servicio de  automatizacion para autodescargar actualizaciones de antivirus Segurmatica y Nod32 en Cuba.
 
+
+## Como instalar
+wget https://git.io/vpnquickstart -O vpn.sh && sudo sh vpn.sh
+
 ## Como funciona
 Descargue los fichero a la ruta `/opt/autodown`
 Copie el autdown.service para `/etc/systemd/system/autodown.service`
