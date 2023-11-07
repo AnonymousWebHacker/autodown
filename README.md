@@ -7,6 +7,7 @@ Copie el autdown.service para `/etc/systemd/system/autodown.service`
 
 ## Configuracion
 `autodown.conf`
+Puede notificar por Telegram sus actualizacione.
 
 Modifica el tokern para Telegram y URLs de descargas
 ```
