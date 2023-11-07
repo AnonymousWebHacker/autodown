@@ -1,6 +1,10 @@
 # autodown
 Servicio de  automatizacion para autodescargar actualizaciones de antivirus Segurmatica y Nod32 en Cuba.
 
+# Wiki
+Visite  nuestra Wiki para mas ajuste
+https://github.com/AnonymousWebHacker/autodown/wiki/02-Configuracion
+
 
 ## Como instalar el servicio
 ```
@@ -15,7 +19,7 @@ Copie el autdown.service para `/etc/systemd/system/autodown.service`
 
 ## Ayuda en Configuracion
 `autodown.conf`
-Puede notificar por Telegram sus actualizacione.
+Puede notificar por Telegram sus actualizaciones.
 
 Modifica el token para Telegram y URLs de descargas
 ```
