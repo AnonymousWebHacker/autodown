@@ -2,8 +2,10 @@
 Servicio de  automatizacion para autodescargar actualizaciones de antivirus Segurmatica y Nod32 en Cuba.
 
 
-## Como instalar
-`wget https://raw.githubusercontent.com/AnonymousWebHacker/autodown/main/autodown_installer -O /tmp/autodown_installer.sh && sudo sh autodown_installer.sh`
+## Como instalar el servicio
+```
+wget https://raw.githubusercontent.com/AnonymousWebHacker/autodown/main/autodown_installer -O /tmp/autodown_installer.sh && sudo sh autodown_installer.sh
+```
 
 Simplemente modifique su configuracion y corra el servicio.
 
