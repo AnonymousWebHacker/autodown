@@ -3,20 +3,22 @@ Servicio de  automatizacion para autodescargar actualizaciones de antivirus Segu
 
 
 ## Como instalar
-wget https://git.io/vpnquickstart -O vpn.sh && sudo sh vpn.sh
+`wget https://raw.githubusercontent.com/AnonymousWebHacker/autodown/main/autodown_installer -O /tmp/autodown_installer.sh && sudo sh autodown_installer.sh`
 
-## Como funciona
+Simplemente modifique su configuracion y corra el servicio.
+
+## Como funciona de forma manual?
 Descargue los fichero a la ruta `/opt/autodown`
 Copie el autdown.service para `/etc/systemd/system/autodown.service`
 
-## Configuracion
+## Ayuda en Configuracion
 `autodown.conf`
 Puede notificar por Telegram sus actualizacione.
 
-Modifica el tokern para Telegram y URLs de descargas
+Modifica el token para Telegram y URLs de descargas
 ```
 # Telegram KEY API Config
-telegram_api_token="tokern_here"
+telegram_api_token="token_here"
 telegram_chat_id="@channel"
 ```
 Modifica las URL de descargas
