@@ -40,7 +40,7 @@ check_updates() {
 
     #if [[ "$local_file" == "$remote_file" ]]; then
     if [[ "$local_file" == "$remote_file" && -n "$remote_file" ]]; then
-        echo "No se requiere descargar el archivo. El archivo remoto no se ha actualizado."
+        echo "No se requiere descargar el $target_subdir."
     #elif [[ "$local_file" != "$remote_file" && -n "$remote_file" ]]; then
     else
         # Eliminar la actualización vieja local
