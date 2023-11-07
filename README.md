@@ -3,7 +3,7 @@ Servicio de  automatizacion para autodescargar actualizaciones de antivirus Segu
 
 # Wiki
 Visite  nuestra Wiki para mas ajuste
-https://github.com/AnonymousWebHacker/autodown/wiki/02-Configuracion
+https://github.com/AnonymousWebHacker/autodown/wiki
 
 
 ## Como instalar el servicio
@@ -11,31 +11,8 @@ https://github.com/AnonymousWebHacker/autodown/wiki/02-Configuracion
 wget https://raw.githubusercontent.com/AnonymousWebHacker/autodown/main/autodown_installer -O /tmp/autodown_installer.sh && sudo sh /tmp/autodown_installer.sh
 ```
 
-Simplemente modifique su configuracion y corra el servicio.
-
-## Como funciona de forma manual?
-Descargue los fichero a la ruta `/opt/autodown`
-Copie el autdown.service para `/etc/systemd/system/autodown.service`
-
 ## Ayuda en Configuracion
-`autodown.conf`
-Puede notificar por Telegram sus actualizaciones.
-
-Modifica el token para Telegram y URLs de descargas
-```
-# Telegram KEY API Config
-telegram_api_token="token_here"
-telegram_chat_id="@channel"
-```
-Modifica las URL de descargas
-```
-# Lista de URLS a decargar
-# d -- diariamentes
-# s -- semanal
-#d http://antivirus.uij.edu.cu/nod32/nod32.zip
-d https://url/segurmatica/update.zip
-d http://url/nod32/update.zip
-```
+https://github.com/AnonymousWebHacker/autodown/wiki
 
 ## Habilitar/Correr/Parar el servicio primera vez
 ```
