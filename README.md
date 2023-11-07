@@ -1,5 +1,5 @@
 # autodown
-Proceso automatizacion de  actualizaciones de antivirus Segurmatica y Nod32
+Servicio de  automatizacion para autodescargar actualizaciones de antivirus Segurmatica y Nod32 en Cuba.
 
 ## Como funciona
 Descargue los fichero a la ruta `/opt/autodown`
