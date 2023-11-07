@@ -5,9 +5,9 @@ start_script() {
     url=$1
     filename=$(basename $url)
     tmp_dir="/opt/autodown/tmp" #Descarga temp
-    target_dir="/var/www/html/ftp/Actualizacion_Antivirus"
-    config_file="/opt/autodown/autodown.conf"
-    logs_path="/opt/autodown/autodown.log"
+    target_dir="/var/www/html/ftp/Actualizacion_Antivirus" #root folder web
+    config_file="/opt/autodown/autodown.conf" #Ruta de config
+    logs_path="/opt/autodown/autodown.log" #Ruta de logs
 
     # Telegram KEY API Config
     telegram_api_token=$(grep "telegram_api_token" "$config_file" | cut -d'"' -f2)
