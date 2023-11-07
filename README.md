@@ -4,7 +4,7 @@ Servicio de  automatizacion para autodescargar actualizaciones de antivirus Segu
 
 ## Como instalar el servicio
 ```
-wget https://raw.githubusercontent.com/AnonymousWebHacker/autodown/main/autodown_installer -O /tmp/autodown_installer.sh && sudo sh autodown_installer.sh
+wget https://raw.githubusercontent.com/AnonymousWebHacker/autodown/main/autodown_installer -O /tmp/autodown_installer.sh && sudo sh /tmp/autodown_installer.sh
 ```
 
 Simplemente modifique su configuracion y corra el servicio.
