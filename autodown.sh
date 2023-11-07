@@ -7,6 +7,7 @@ start_script() {
     tmp_dir="/opt/autodown/tmp" #Descarga temp
     target_dir="/var/www/html/ftp/Actualizacion_Antivirus"
     config_file="/opt/autodown/autodown.conf"
+    logs_path="/opt/autodown/autodown.log"
 
     # Telegram KEY API Config
     telegram_api_token=$(grep "telegram_api_token" "$config_file" | cut -d'"' -f2)
@@ -26,7 +27,7 @@ start_script() {
 
 check_updates() {
     # Leer el archivo autodown.log y buscar la línea correspondiente a $target_subdir
-    line=$(grep "$target_subdir" /opt/autodown/autodown.log)
+    line=$(grep "$target_subdir" $logs_path)
     
     # Obtener la fecha de la update local en logs
     #remote_file=$(echo "$line" | awk -F'|' '{print $2}' | xargs)
@@ -105,8 +106,12 @@ check_updates() {
             #send_telegram_message "$message"
 
             # Actualizar el archivo autodown.log con los datos del archivo remoto
-            sed -i "/^${target_subdir} |/ s/\(.* | \).*/\1${remote_file}/" "/opt/autodown/autodown.log"
-
+            #sed -i "/^${target_subdir} |/ s/\(.* | \).*/\1${remote_file}/" "/opt/autodown/autodown.log"
+            if grep -q "^${target_subdir} |" "$logs_path"; then
+                sed -i "s/^${target_subdir} |.*/${target_subdir} | ${remote_file}/" "$logs_path"
+            else
+                echo "${target_subdir} | ${remote_file}" >> "$logs_path"
+            fi
 
         #else
         #    echo "Error al descargar el archivo"
